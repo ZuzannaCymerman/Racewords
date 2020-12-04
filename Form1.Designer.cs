@@ -66,7 +66,7 @@ namespace Racewords
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox3.Location = new System.Drawing.Point(640, 649);
+            this.pictureBox3.Location = new System.Drawing.Point(640, 642);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(10, 220);
             this.pictureBox3.TabIndex = 2;
