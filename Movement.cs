@@ -16,7 +16,7 @@ namespace Racewords
         {
             if (top >= 1240)
             {
-                top = 0;
+                top = -220;
             }
             else
             {

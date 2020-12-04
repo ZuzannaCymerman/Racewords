@@ -48,7 +48,7 @@ namespace Racewords
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int speed = 8;
+            int speed = 4;
             pictureBox1.Top = Movement.MoveSingleLine(pictureBox1.Top, speed);
             pictureBox2.Top = Movement.MoveSingleLine(pictureBox2.Top, speed);
             pictureBox3.Top = Movement.MoveSingleLine(pictureBox3.Top, speed);

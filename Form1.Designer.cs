@@ -46,7 +46,7 @@ namespace Racewords
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox1.Location = new System.Drawing.Point(639, -213);
+            this.pictureBox1.Location = new System.Drawing.Point(639, -220);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(10, 220);
             this.pictureBox1.TabIndex = 0;
@@ -56,7 +56,7 @@ namespace Racewords
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox2.Location = new System.Drawing.Point(639, 285);
+            this.pictureBox2.Location = new System.Drawing.Point(640, 353);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(10, 220);
             this.pictureBox2.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace Racewords
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox3.Location = new System.Drawing.Point(640, 536);
+            this.pictureBox3.Location = new System.Drawing.Point(640, 649);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(10, 220);
             this.pictureBox3.TabIndex = 2;
@@ -82,7 +82,7 @@ namespace Racewords
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox4.Location = new System.Drawing.Point(640, 790);
+            this.pictureBox4.Location = new System.Drawing.Point(639, 932);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(10, 220);
             this.pictureBox4.TabIndex = 3;
@@ -92,7 +92,7 @@ namespace Racewords
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox5.Location = new System.Drawing.Point(640, 34);
+            this.pictureBox5.Location = new System.Drawing.Point(640, 63);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(10, 220);
             this.pictureBox5.TabIndex = 4;
