@@ -12,6 +12,7 @@ namespace Racewords
 {
     public partial class Form1 : Form
     {
+        int speed = 5;
         public Form1()
         {
             InitializeComponent();
@@ -48,13 +49,38 @@ namespace Racewords
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int speed = 4;
+            
             pictureBox1.Top = Movement.MoveSingleLine(pictureBox1.Top, speed);
             pictureBox2.Top = Movement.MoveSingleLine(pictureBox2.Top, speed);
             pictureBox3.Top = Movement.MoveSingleLine(pictureBox3.Top, speed);
             pictureBox4.Top = Movement.MoveSingleLine(pictureBox4.Top, speed);
             pictureBox5.Top = Movement.MoveSingleLine(pictureBox5.Top, speed);
         }
-      
+
+        private void Skoda_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Left)
+            {
+                Skoda.Left += -5;
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                Skoda.Left += 5;
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                Skoda.Top += -5;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+               
+                Skoda.Top += 5;
+            }
+        }
     }
 }
