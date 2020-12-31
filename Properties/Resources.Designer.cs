@@ -63,9 +63,9 @@ namespace Racewords.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap skoda111 {
+        internal static System.Drawing.Bitmap Skoda {
             get {
-                object obj = ResourceManager.GetObject("skoda111", resourceCulture);
+                object obj = ResourceManager.GetObject("Skoda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

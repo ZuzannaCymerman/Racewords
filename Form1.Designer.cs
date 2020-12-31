@@ -31,13 +31,13 @@ namespace Racewords
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.Skoda = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Skoda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -51,15 +51,17 @@ namespace Racewords
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox6
+            // Skoda
             // 
-            this.pictureBox6.Image = global::Racewords.Properties.Resources.skoda111;
-            this.pictureBox6.Location = new System.Drawing.Point(824, 716);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(170, 242);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
+            this.Skoda.BackColor = System.Drawing.Color.Transparent;
+            this.Skoda.Image = global::Racewords.Properties.Resources.Skoda;
+            this.Skoda.Location = new System.Drawing.Point(767, 474);
+            this.Skoda.Name = "Skoda";
+            this.Skoda.Size = new System.Drawing.Size(164, 311);
+            this.Skoda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Skoda.TabIndex = 5;
+            this.Skoda.TabStop = false;
+            this.Skoda.Click += new System.EventHandler(this.Skoda_Click);
             // 
             // pictureBox5
             // 
@@ -74,7 +76,7 @@ namespace Racewords
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox4.Location = new System.Drawing.Point(639, 932);
+            this.pictureBox4.Location = new System.Drawing.Point(640, 933);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(10, 220);
             this.pictureBox4.TabIndex = 3;
@@ -115,9 +117,9 @@ namespace Racewords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1264, 985);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.Skoda);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -126,7 +128,9 @@ namespace Racewords
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+          
+            ((System.ComponentModel.ISupportInitialize)(this.Skoda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -144,7 +148,7 @@ namespace Racewords
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox Skoda;
     }
 }
 
