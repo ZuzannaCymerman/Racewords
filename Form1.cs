@@ -66,20 +66,20 @@ namespace Racewords
         {
             if(e.KeyCode == Keys.Left)
             {
-                Skoda.Left += -5;
+                Skoda.Left += -10;
             }
             if (e.KeyCode == Keys.Right)
             {
-                Skoda.Left += 5;
+                Skoda.Left += 10;
             }
             if (e.KeyCode == Keys.Up)
             {
-                Skoda.Top += -5;
+                Skoda.Top += -10;
             }
             if (e.KeyCode == Keys.Down)
             {
                
-                Skoda.Top += 5;
+                Skoda.Top += 10;
             }
         }
     }
