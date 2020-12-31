@@ -55,6 +55,7 @@ namespace Racewords
             pictureBox3.Top = Movement.MoveSingleLine(pictureBox3.Top, speed);
             pictureBox4.Top = Movement.MoveSingleLine(pictureBox4.Top, speed);
             pictureBox5.Top = Movement.MoveSingleLine(pictureBox5.Top, speed);
+            //B.Top = Movement.MoveLetter(B.Top, speed);
         }
 
         private void Skoda_Click(object sender, EventArgs e)
@@ -81,6 +82,11 @@ namespace Racewords
                
                 Skoda.Top += 10;
             }
+        }
+
+        private void B_Click(object sender, EventArgs e)
+        {
+        
         }
     }
 }

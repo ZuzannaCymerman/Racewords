@@ -60,18 +60,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -83,6 +83,84 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Skoda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\Aprim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\I.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\J.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\O.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\U.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\Y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters\Z.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
