@@ -12,6 +12,7 @@ namespace Racewords
 {
     public partial class Form1 : Form
     {
+       
         int speed = 5;
         public Form1()
         {
@@ -84,9 +85,9 @@ namespace Racewords
             }
         }
 
-        private void B_Click(object sender, EventArgs e)
+        private void A_Click(object sender, EventArgs e)
         {
-        
+
         }
     }
 }

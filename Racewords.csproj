@@ -162,5 +162,80 @@
   <ItemGroup>
     <None Include="letters\Z.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\I.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\J.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\O.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\U.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\Y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters black\Z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tlo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
