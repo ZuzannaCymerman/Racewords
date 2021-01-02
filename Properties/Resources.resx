@@ -118,79 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="A" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\A.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="B" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="C" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\C.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="D" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\D.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="E" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\E.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="F" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\F.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="G" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\G.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="H" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\H.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="I" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\I.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="J" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\J.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="K" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\K.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="L" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\L.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="M" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\M.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="N" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\N.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="O" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\O.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="P" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\P.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="R" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\R.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="S" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Skoda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Skoda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="T" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\T.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="U" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\U.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="W" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\W.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="X" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\X.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Y" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\Y.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Z" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\letters black\Z.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

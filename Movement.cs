@@ -25,9 +25,6 @@ namespace Racewords
             return top;
         }
 
-        public static int MoveLetter(int top, int speed)
-        {
-            return 0; 
-        }
+       
     }
 }

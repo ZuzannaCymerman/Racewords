@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Letters.cs" />
     <Compile Include="Movement.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -236,6 +237,78 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="tlo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\I.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\J.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\O.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\U.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\Y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="letters green\Z.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

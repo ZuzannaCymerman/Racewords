@@ -37,14 +37,17 @@ namespace Racewords
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.A = new System.Windows.Forms.PictureBox();
+            this.Letter2 = new System.Windows.Forms.Label();
+            this.Letter1 = new System.Windows.Forms.Label();
+            this.Letter3 = new System.Windows.Forms.Label();
+            this.Word = new System.Windows.Forms.Label();
+            this.Letter4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Skoda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.A)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -57,9 +60,9 @@ namespace Racewords
             // 
             this.Skoda.BackColor = System.Drawing.Color.Transparent;
             this.Skoda.Image = global::Racewords.Properties.Resources.Skoda;
-            this.Skoda.Location = new System.Drawing.Point(867, 419);
+            this.Skoda.Location = new System.Drawing.Point(750, 258);
             this.Skoda.Name = "Skoda";
-            this.Skoda.Size = new System.Drawing.Size(174, 329);
+            this.Skoda.Size = new System.Drawing.Size(182, 333);
             this.Skoda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Skoda.TabIndex = 5;
             this.Skoda.TabStop = false;
@@ -115,16 +118,65 @@ namespace Racewords
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // A
+            // Letter2
             // 
-            this.A.BackColor = System.Drawing.Color.Transparent;
-            this.A.Image = global::Racewords.Properties.Resources.A;
-            this.A.Location = new System.Drawing.Point(450, 353);
-            this.A.Name = "A";
-            this.A.Size = new System.Drawing.Size(48, 46);
-            this.A.TabIndex = 6;
-            this.A.TabStop = false;
-            this.A.Click += new System.EventHandler(this.A_Click);
+            this.Letter2.AutoSize = true;
+            this.Letter2.BackColor = System.Drawing.Color.Transparent;
+            this.Letter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter2.Location = new System.Drawing.Point(914, 152);
+            this.Letter2.Name = "Letter2";
+            this.Letter2.Size = new System.Drawing.Size(36, 39);
+            this.Letter2.TabIndex = 7;
+            this.Letter2.Text = "L";
+            this.Letter2.Click += new System.EventHandler(this.Letter2_Click);
+            // 
+            // Letter1
+            // 
+            this.Letter1.AutoSize = true;
+            this.Letter1.BackColor = System.Drawing.Color.Transparent;
+            this.Letter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter1.Location = new System.Drawing.Point(341, 187);
+            this.Letter1.Name = "Letter1";
+            this.Letter1.Size = new System.Drawing.Size(36, 39);
+            this.Letter1.TabIndex = 8;
+            this.Letter1.Text = "L";
+            this.Letter1.Click += new System.EventHandler(this.Letter1_Click_1);
+            // 
+            // Letter3
+            // 
+            this.Letter3.AutoSize = true;
+            this.Letter3.BackColor = System.Drawing.Color.Transparent;
+            this.Letter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter3.Location = new System.Drawing.Point(492, 400);
+            this.Letter3.Name = "Letter3";
+            this.Letter3.Size = new System.Drawing.Size(36, 39);
+            this.Letter3.TabIndex = 9;
+            this.Letter3.Text = "L";
+            this.Letter3.Click += new System.EventHandler(this.Letter3_Click);
+            // 
+            // Word
+            // 
+            this.Word.AutoSize = true;
+            this.Word.BackColor = System.Drawing.Color.Transparent;
+            this.Word.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Word.Location = new System.Drawing.Point(572, 5);
+            this.Word.Name = "Word";
+            this.Word.Size = new System.Drawing.Size(152, 55);
+            this.Word.TabIndex = 10;
+            this.Word.Text = "label1";
+            this.Word.Click += new System.EventHandler(this.Word_Click);
+            // 
+            // Letter4
+            // 
+            this.Letter4.AutoSize = true;
+            this.Letter4.BackColor = System.Drawing.Color.Transparent;
+            this.Letter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter4.Location = new System.Drawing.Point(1138, 353);
+            this.Letter4.Name = "Letter4";
+            this.Letter4.Size = new System.Drawing.Size(36, 39);
+            this.Letter4.TabIndex = 11;
+            this.Letter4.Text = "L";
+            this.Letter4.Click += new System.EventHandler(this.Letter4_Click);
             // 
             // Form1
             // 
@@ -132,13 +184,17 @@ namespace Racewords
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1264, 985);
+            this.Controls.Add(this.Word);
             this.Controls.Add(this.Skoda);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.A);
+            this.Controls.Add(this.Letter1);
+            this.Controls.Add(this.Letter3);
+            this.Controls.Add(this.Letter2);
+            this.Controls.Add(this.Letter4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -149,8 +205,8 @@ namespace Racewords
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.A)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -163,7 +219,11 @@ namespace Racewords
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox Skoda;
-        private System.Windows.Forms.PictureBox A;
+        private System.Windows.Forms.Label Letter2;
+        private System.Windows.Forms.Label Letter1;
+        private System.Windows.Forms.Label Letter3;
+        private System.Windows.Forms.Label Word;
+        private System.Windows.Forms.Label Letter4;
     }
 }
 
