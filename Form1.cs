@@ -13,10 +13,13 @@ namespace Racewords
 
     public partial class Form1 : Form
     {
-
-        string[] literki = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "I", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
+        string word = "L A I T";
+        string[] letters = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "I", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
         int speed = 5;
         int letterspeed = 6;
+        bool game = false;
+        string bump;
+        string name;
         Random r = new Random();
 
         public Form1()
@@ -25,19 +28,17 @@ namespace Racewords
             InitializeAll();
         }
 
-
+        //Main
         private void timer1_Tick(object sender, EventArgs e)
         {
             InteractionAll();
             LetterMovementAll();
             Lines();
+            CollectWordAll();
         }
 
-        private void Skoda_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
+        //Keyboard 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
@@ -61,21 +62,54 @@ namespace Racewords
             }
         }
 
+        //Word
+        private void CollectWordAll()
+        {
+            CollectWord(Letter1, bump);
+            CollectWord(Letter2, bump);
+            CollectWord(Letter3, bump);
+            CollectWord(Letter4, bump);
+            CollectWord(Letter5, bump);
+        }
+        private void CollectWord(System.Windows.Forms.Label Letter, string bump)
+        {
+            Word.Text = word;
+            if (Interaction(Letter ,bump) == word.Split(' ')[0] & game == true)
+            {
+                Console.WriteLine("good");
+            }
+            else if (Interaction(Letter, bump) != word.Split(' ')[0] & game == true)
+            {
+                Word.Text = "Koniec gry";
+                timer1.Enabled = false;
+            }
+        }
+        
+
+
+        //Letters
         private void InteractionAll()
         {
-            Interaction(Letter1);
-            Interaction(Letter2);
-            Interaction(Letter3);
-            Interaction(Letter4);
+            Interaction(Letter1, bump);
+            Interaction(Letter2, bump);
+            Interaction(Letter3, bump);
+            Interaction(Letter4, bump);
+            Interaction(Letter5, bump);
         }
-        private void Interaction(System.Windows.Forms.Label Letter)
+        private string Interaction(System.Windows.Forms.Label Letter, string bump)
         {
-
             if (Skoda.Bounds.IntersectsWith(Letter.Bounds))
             {
                 Letter.ForeColor = System.Drawing.Color.Green;
+                bump = Letter.Text;
+                name = Letter.Name;
+                game = true;
             }
-
+            else
+            {
+                game = false;
+            }
+            return bump;
         }
         private void Lines()
         {
@@ -91,12 +125,13 @@ namespace Racewords
             LetterMovement(Letter2);
             LetterMovement(Letter3);
             LetterMovement(Letter4);
+            LetterMovement(Letter5);
         }
         private void LetterMovement(System.Windows.Forms.Label Letter)
         {
             Letter.Location = Letters.LetterMovement(Letter.Location, letterspeed);
             Letter.ForeColor = Letters.ColorChange(Letter.ForeColor);
-            Letter.Text = Letters.TextChange(Letter.Text, literki);
+            Letter.Text = Letters.TextChange(Letter.Text, letters);
         }
         private void InitializeAll()
         {
@@ -104,66 +139,30 @@ namespace Racewords
             InitializeLetter(Letter2);
             InitializeLetter(Letter3);
             InitializeLetter(Letter4);
+            InitializeLetter(Letter5);
         }
         private void InitializeLetter(System.Windows.Forms.Label Letter)
         {
             Letter.Location = Letters.LetterLocation(Letter.Location);
-            Letter.Text = literki[r.Next(0, literki.Length)];
+            Letter.Text = letters[r.Next(0, letters.Length)];
             Letter.Location = Letters.LetterLocation(Letter.Location);
         }
-       
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void Letter1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Letter2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Letter3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Letter4_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void Word_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //Components
+        private void Skoda_Click(object sender, EventArgs e) { }
+        private void Form1_Load(object sender, EventArgs e) { }
+        private void pictureBox1_Click(object sender, EventArgs e) { }
+        private void pictureBox2_Click(object sender, EventArgs e) { }
+        private void pictureBox3_Click(object sender, EventArgs e) { }
+        private void pictureBox4_Click(object sender, EventArgs e) { }
+        private void pictureBox5_Click(object sender, EventArgs e) { }
+        private void Letter1_Click_1(object sender, EventArgs e) { }
+        private void Letter2_Click(object sender, EventArgs e) { }
+        private void Letter3_Click(object sender, EventArgs e) { }
+        private void Letter4_Click(object sender, EventArgs e) { }
+        private void Word_Click(object sender, EventArgs e) { }
+        private void Letter5_Click(object sender, EventArgs e) { }
     }
 }
