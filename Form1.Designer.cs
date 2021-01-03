@@ -45,18 +45,19 @@ namespace Racewords
             this.Points = new System.Windows.Forms.Label();
             this.Letter10 = new System.Windows.Forms.Label();
             this.Life = new System.Windows.Forms.Label();
+            this.LevelLabel = new System.Windows.Forms.Label();
+            this.Skoda = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.Skoda = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Skoda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Skoda)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -106,7 +107,7 @@ namespace Racewords
             this.Word.AutoSize = true;
             this.Word.BackColor = System.Drawing.Color.White;
             this.Word.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Word.Location = new System.Drawing.Point(546, 72);
+            this.Word.Location = new System.Drawing.Point(520, 104);
             this.Word.Name = "Word";
             this.Word.Size = new System.Drawing.Size(0, 55);
             this.Word.TabIndex = 10;
@@ -141,7 +142,7 @@ namespace Racewords
             this.Title.AutoSize = true;
             this.Title.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Title.Location = new System.Drawing.Point(433, -4);
+            this.Title.Location = new System.Drawing.Point(489, 40);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(152, 55);
             this.Title.TabIndex = 13;
@@ -226,6 +227,31 @@ namespace Racewords
             this.Life.TabIndex = 20;
             this.Life.Text = "label1";
             // 
+            // LevelLabel
+            // 
+            this.LevelLabel.AutoSize = true;
+            this.LevelLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LevelLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LevelLabel.Location = new System.Drawing.Point(368, -4);
+            this.LevelLabel.Name = "LevelLabel";
+            this.LevelLabel.Size = new System.Drawing.Size(100, 37);
+            this.LevelLabel.TabIndex = 22;
+            this.LevelLabel.Text = "label1";
+            this.LevelLabel.Click += new System.EventHandler(this.LevelLabel_Click);
+            // 
+            // Skoda
+            // 
+            this.Skoda.BackColor = System.Drawing.Color.Transparent;
+            this.Skoda.Image = global::Racewords.Properties.Resources.Skoda;
+            this.Skoda.Location = new System.Drawing.Point(656, 497);
+            this.Skoda.Name = "Skoda";
+            this.Skoda.Size = new System.Drawing.Size(107, 192);
+            this.Skoda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Skoda.TabIndex = 21;
+            this.Skoda.TabStop = false;
+            this.Skoda.Click += new System.EventHandler(this.Skoda_Click_1);
+            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -276,24 +302,13 @@ namespace Racewords
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // Skoda
-            // 
-            this.Skoda.BackColor = System.Drawing.Color.Transparent;
-            this.Skoda.Image = global::Racewords.Properties.Resources.Skoda;
-            this.Skoda.Location = new System.Drawing.Point(656, 497);
-            this.Skoda.Name = "Skoda";
-            this.Skoda.Size = new System.Drawing.Size(107, 192);
-            this.Skoda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Skoda.TabIndex = 21;
-            this.Skoda.TabStop = false;
-            this.Skoda.Click += new System.EventHandler(this.Skoda_Click_1);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1264, 985);
+            this.Controls.Add(this.LevelLabel);
             this.Controls.Add(this.Skoda);
             this.Controls.Add(this.Life);
             this.Controls.Add(this.Points);
@@ -318,12 +333,12 @@ namespace Racewords
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.Skoda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Skoda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,6 +367,7 @@ namespace Racewords
         private System.Windows.Forms.Label Letter10;
         private System.Windows.Forms.Label Life;
         private System.Windows.Forms.PictureBox Skoda;
+        private System.Windows.Forms.Label LevelLabel;
     }
 }
 
