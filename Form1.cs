@@ -81,12 +81,14 @@ namespace Racewords
                 levellabeltext = "First level. Collect the french word";
                 title = key + " - " + value;
                 collect = key;
+               
             }
             else if (level == 1)
             {
                 levellabeltext = "Second level. Collect the translation";
                 title = key;
                 collect = value;
+                k = 0;
             }
             LevelLabel.Text = levellabeltext;
             Title.Text = title;
@@ -107,7 +109,7 @@ namespace Racewords
                             k++;
                             Word.Text = null;
                             letterspeed++;
-                            if (points == 2)
+                            if (points == 5)
                             {
                                 level++;
                             }
