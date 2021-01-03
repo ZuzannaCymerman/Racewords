@@ -18,8 +18,7 @@ namespace Racewords
         int speed = 5;
         int letterspeed = 6;
         bool game = false;
-        string bump;
-        string name;
+        string bump = "";
         Random r = new Random();
 
         public Form1()
@@ -73,20 +72,20 @@ namespace Racewords
         }
         private void CollectWord(System.Windows.Forms.Label Letter, string bump)
         {
+            bump = Interaction(Letter, bump);
             Word.Text = word;
-            if (Interaction(Letter ,bump) == word.Split(' ')[0] & game == true)
+            if (bump == word.Split(' ')[0] & game == true)
             {
                 Console.WriteLine("good");
             }
-            else if (Interaction(Letter, bump) != word.Split(' ')[0] & game == true)
+            else if (bump != word.Split(' ')[0] & game == true)
             {
+                Console.WriteLine(bump);
                 Word.Text = "Koniec gry";
                 timer1.Enabled = false;
             }
         }
         
-
-
         //Letters
         private void InteractionAll()
         {
@@ -102,7 +101,6 @@ namespace Racewords
             {
                 Letter.ForeColor = System.Drawing.Color.Green;
                 bump = Letter.Text;
-                name = Letter.Name;
                 game = true;
             }
             else
