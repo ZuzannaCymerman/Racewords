@@ -61,6 +61,16 @@ namespace Racewords.Properties {
         }
         
         /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Byte[].
+        /// </summary>
+        internal static byte[] Alabama {
+            get {
+                object obj = ResourceManager.GetObject("Alabama", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Skoda {

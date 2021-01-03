@@ -310,5 +310,8 @@
   <ItemGroup>
     <None Include="letters green\Z.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Alabama.mp3" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

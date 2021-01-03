@@ -13,27 +13,36 @@ namespace Racewords
 
     public partial class Form1 : Form
     {
-        string word = "L A I T";
-        string[] letters = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "I", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
+        Dictionary<string, string> word = new Dictionary<string, string>(){
+            {"C H A T", "K O T"},
+            {"N U I T", "N O C"},
+            {"L A I T", "M L E K O"},
+            {"C H I E N", "P I E S" },
+            {"C H I C", "W D Z I Ę K" }
+        };
+
+        string[] letters = { "L", "A" , "I", "T", "C", "H","I", "E", "N", "U"};
         int speed = 5;
         int letterspeed = 6;
-        bool game = false;
         string bump = "";
-        Random r = new Random();
-
+        int points = 0;
+        int i = 0;
+        int k = 0;
+        int lives = 3;
+        int level = 0;
         public Form1()
         {
             InitializeComponent();
             InitializeAll();
+           
         }
 
         //Main
         private void timer1_Tick(object sender, EventArgs e)
         {
-            InteractionAll();
             LetterMovementAll();
             Lines();
-            CollectWordAll();
+            GamePlayAll();
         }
 
       
@@ -42,72 +51,98 @@ namespace Racewords
         {
             if (e.KeyCode == Keys.Left)
             {
-                Skoda.Left += -10;
+                Skoda.Left += -35;
             }
             if (e.KeyCode == Keys.Right)
             {
-                Skoda.Left += 10;
+                Skoda.Left += 35;
             }
             if (e.KeyCode == Keys.Up)
-
             {
-
-                Skoda.Top += -10;
+                Skoda.Top += -35;
             }
             if (e.KeyCode == Keys.Down)
             {
 
-                Skoda.Top += 10;
+                Skoda.Top += 35;
             }
         }
 
-        //Word
-        private void CollectWordAll()
+        private void CollectWord(Label Letter)
         {
-            CollectWord(Letter1, bump);
-            CollectWord(Letter2, bump);
-            CollectWord(Letter3, bump);
-            CollectWord(Letter4, bump);
-            CollectWord(Letter5, bump);
+         
+            Title.Text = word.ElementAt(k).Key +" - "+ word.ElementAt(k).Value;
+            Points.Text ="Points: "+points;
+            Life.Text = "Lives: " + lives;
+            if (level == 0)
+            {
+                if (Skoda.Bounds.IntersectsWith(Letter.Bounds))
+                {
+
+                    bump = Letter.Text;
+                    if (bump == word.ElementAt(k).Key.Split(' ')[i])
+                    {
+                        Word.Text = Word.Text + word.ElementAt(k).Key.Split(' ')[i];
+                        if (i == word.ElementAt(k).Key.Split(' ').Length - 1)
+                        {
+                            i = 0;
+                            points++;
+                            k++;
+                            Word.Text = null;
+                            letterspeed++;
+                        }
+                        else
+                        {
+                            i++;
+                        }
+                        Letters.InitializeLetter(Letter, letters);
+                        Letters.LettersMovement(Letter, letterspeed, letters);
+
+                    }
+                    else if (bump != word.ElementAt(k).Key.Split(' ')[i])
+                    {
+                        if (lives != 0)
+                        {
+                            lives--;
+                            Letters.InitializeLetter(Letter, letters);
+                            Letters.LettersMovement(Letter, letterspeed, letters);
+                        }
+                        else if (lives == 0)
+                        {
+                            Letter.BackColor = Color.Red;
+                            Letter.ForeColor = Color.White;
+                            Word.Text = "Koniec gry";
+                            timer1.Enabled = false;
+                        }
+
+                    }
+
+                }
+            }
+
+
+         
         }
-        private void CollectWord(System.Windows.Forms.Label Letter, string bump)
+
+
+        //Gameplay
+        private void GamePlayAll()
         {
-            bump = Interaction(Letter, bump);
-            Word.Text = word;
-            if (bump == word.Split(' ')[0] & game == true)
-            {
-                Console.WriteLine("good");
-            }
-            else if (bump != word.Split(' ')[0] & game == true)
-            {
-                Console.WriteLine(bump);
-                Word.Text = "Koniec gry";
-                timer1.Enabled = false;
-            }
-        }
-        
-        //Letters
-        private void InteractionAll()
-        {
-            Interaction(Letter1, bump);
-            Interaction(Letter2, bump);
-            Interaction(Letter3, bump);
-            Interaction(Letter4, bump);
-            Interaction(Letter5, bump);
-        }
-        private string Interaction(System.Windows.Forms.Label Letter, string bump)
-        {
-            if (Skoda.Bounds.IntersectsWith(Letter.Bounds))
-            {
-                Letter.ForeColor = System.Drawing.Color.Green;
-                bump = Letter.Text;
-                game = true;
-            }
-            else
-            {
-                game = false;
-            }
-            return bump;
+            
+           
+            CollectWord(Letter1);
+            CollectWord(Letter2);
+            CollectWord(Letter3);
+            CollectWord(Letter4);
+            CollectWord(Letter5);
+            CollectWord(Letter6);
+            CollectWord(Letter7);
+            CollectWord(Letter8);
+            CollectWord(Letter9);
+            CollectWord(Letter10);
+
+
+
         }
         private void Lines()
         {
@@ -119,34 +154,32 @@ namespace Racewords
         }
         private void LetterMovementAll()
         {
-            LetterMovement(Letter1);
-            LetterMovement(Letter2);
-            LetterMovement(Letter3);
-            LetterMovement(Letter4);
-            LetterMovement(Letter5);
-        }
-        private void LetterMovement(System.Windows.Forms.Label Letter)
-        {
-            Letter.Location = Letters.LetterMovement(Letter.Location, letterspeed);
-            Letter.ForeColor = Letters.ColorChange(Letter.ForeColor);
-            Letter.Text = Letters.TextChange(Letter.Text, letters);
+            Letters.LettersMovement(Letter1, letterspeed+1, letters);
+            Letters.LettersMovement(Letter2, letterspeed, letters);
+            Letters.LettersMovement(Letter3, letterspeed-1, letters);
+            Letters.LettersMovement(Letter4, letterspeed, letters);
+            Letters.LettersMovement(Letter5, letterspeed+3, letters);
+            Letters.LettersMovement(Letter6, letterspeed, letters);
+            Letters.LettersMovement(Letter7, letterspeed, letters);
+            Letters.LettersMovement(Letter8, letterspeed+1, letters);
+            Letters.LettersMovement(Letter9, letterspeed, letters);
+            Letters.LettersMovement(Letter10, letterspeed, letters);
+
         }
         private void InitializeAll()
         {
-            InitializeLetter(Letter1);
-            InitializeLetter(Letter2);
-            InitializeLetter(Letter3);
-            InitializeLetter(Letter4);
-            InitializeLetter(Letter5);
+            Letters.InitializeLetter(Letter1, letters);
+            Letters.InitializeLetter(Letter2, letters);
+            Letters.InitializeLetter(Letter3, letters);
+            Letters.InitializeLetter(Letter4, letters);
+            Letters.InitializeLetter(Letter5, letters);
+            Letters.InitializeLetter(Letter6, letters);
+            Letters.InitializeLetter(Letter7, letters);
+            Letters.InitializeLetter(Letter8, letters);
+            Letters.InitializeLetter(Letter9, letters);
+            Letters.InitializeLetter(Letter10, letters);
         }
-        private void InitializeLetter(System.Windows.Forms.Label Letter)
-        {
-            Letter.Location = Letters.LetterLocation(Letter.Location);
-            Letter.Text = letters[r.Next(0, letters.Length)];
-            Letter.Location = Letters.LetterLocation(Letter.Location);
-        }
-
-
+        
 
         //Components
         private void Skoda_Click(object sender, EventArgs e) { }
@@ -162,5 +195,17 @@ namespace Racewords
         private void Letter4_Click(object sender, EventArgs e) { }
         private void Word_Click(object sender, EventArgs e) { }
         private void Letter5_Click(object sender, EventArgs e) { }
+        private void Title_Click(object sender, EventArgs e) { }
+        private void Letter6_Click(object sender, EventArgs e) { }
+        private void Letter7_Click(object sender, EventArgs e) { }
+        private void Letter8_Click(object sender, EventArgs e) { }
+        private void Letter9_Click(object sender, EventArgs e) { }
+        private void Points_Click(object sender, EventArgs e) { }
+        private void Letter10_Click(object sender, EventArgs e) { }
+
+        private void Skoda_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
