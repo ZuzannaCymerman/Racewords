@@ -22,7 +22,7 @@ namespace Racewords
         };
 
         string[] letters = { "L", "A" , "I", "T", "C", "H","I", "E", "N", "U", };
-        string[] letterstranslation = { "K", "O", "P", "S", "W", "M", "N", "C", "D", "I", "Ę", "Z", "E", "L" };
+        string[] letterstranslation = { "K", "O", "P", "S", "W", "M", "N", "C", "D", "I", "Ę", "Z", "E", "L", "T" };
         int speed = 5;
         int letterspeed = 6;
         string bump = "";
@@ -78,22 +78,22 @@ namespace Racewords
             string levellabeltext = "";
             if (level == 0)
             {
-                levellabeltext = "First level. Collect the french word";
+                levellabeltext = "Pierwszy poziom. Zbierz francuskie słowo.";
                 title = key + " - " + value;
                 collect = key;
-               
             }
             else if (level == 1)
             {
-                levellabeltext = "Second level. Collect the translation";
+                levellabeltext = "Drugi poziom. Zbierz polskie słowo.";
                 title = key;
                 collect = value;
                 k = 0;
+                letterspeed = 6;
             }
             LevelLabel.Text = levellabeltext;
             Title.Text = title;
-            Points.Text ="Points: "+ points;
-            Life.Text = "Lives: " + lives;
+            Points.Text ="Punkty: "+ points;
+            Life.Text = "Życia: " + lives;
             
                 if (Skoda.Bounds.IntersectsWith(Letter.Bounds))
                 {
@@ -109,7 +109,7 @@ namespace Racewords
                             k++;
                             Word.Text = null;
                             letterspeed++;
-                            if (points == 5)
+                            if (points == 1)
                             {
                                 level++;
                             }

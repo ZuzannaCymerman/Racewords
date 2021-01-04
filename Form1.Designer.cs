@@ -70,10 +70,10 @@ namespace Racewords
             // 
             this.Letter2.AutoSize = true;
             this.Letter2.BackColor = System.Drawing.Color.Transparent;
-            this.Letter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Letter2.Location = new System.Drawing.Point(914, 152);
             this.Letter2.Name = "Letter2";
-            this.Letter2.Size = new System.Drawing.Size(39, 42);
+            this.Letter2.Size = new System.Drawing.Size(40, 42);
             this.Letter2.TabIndex = 7;
             this.Letter2.Text = "L";
             this.Letter2.Click += new System.EventHandler(this.Letter2_Click);
@@ -82,10 +82,10 @@ namespace Racewords
             // 
             this.Letter1.AutoSize = true;
             this.Letter1.BackColor = System.Drawing.Color.Transparent;
-            this.Letter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Letter1.Location = new System.Drawing.Point(341, 187);
             this.Letter1.Name = "Letter1";
-            this.Letter1.Size = new System.Drawing.Size(39, 42);
+            this.Letter1.Size = new System.Drawing.Size(40, 42);
             this.Letter1.TabIndex = 8;
             this.Letter1.Text = "L";
             this.Letter1.Click += new System.EventHandler(this.Letter1_Click_1);
@@ -94,10 +94,10 @@ namespace Racewords
             // 
             this.Letter3.AutoSize = true;
             this.Letter3.BackColor = System.Drawing.Color.Transparent;
-            this.Letter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Letter3.Location = new System.Drawing.Point(492, 400);
             this.Letter3.Name = "Letter3";
-            this.Letter3.Size = new System.Drawing.Size(39, 42);
+            this.Letter3.Size = new System.Drawing.Size(40, 42);
             this.Letter3.TabIndex = 9;
             this.Letter3.Text = "L";
             this.Letter3.Click += new System.EventHandler(this.Letter3_Click);
@@ -117,10 +117,10 @@ namespace Racewords
             // 
             this.Letter4.AutoSize = true;
             this.Letter4.BackColor = System.Drawing.Color.Transparent;
-            this.Letter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Letter4.Location = new System.Drawing.Point(1138, 353);
             this.Letter4.Name = "Letter4";
-            this.Letter4.Size = new System.Drawing.Size(39, 42);
+            this.Letter4.Size = new System.Drawing.Size(40, 42);
             this.Letter4.TabIndex = 11;
             this.Letter4.Text = "L";
             this.Letter4.Click += new System.EventHandler(this.Letter4_Click);
@@ -129,10 +129,10 @@ namespace Racewords
             // 
             this.Letter5.AutoSize = true;
             this.Letter5.BackColor = System.Drawing.Color.Transparent;
-            this.Letter5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Letter5.Location = new System.Drawing.Point(179, 390);
             this.Letter5.Name = "Letter5";
-            this.Letter5.Size = new System.Drawing.Size(39, 42);
+            this.Letter5.Size = new System.Drawing.Size(40, 42);
             this.Letter5.TabIndex = 12;
             this.Letter5.Text = "L";
             this.Letter5.Click += new System.EventHandler(this.Letter5_Click);
@@ -152,10 +152,10 @@ namespace Racewords
             // Letter6
             // 
             this.Letter6.AutoSize = true;
-            this.Letter6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Letter6.Location = new System.Drawing.Point(179, 113);
             this.Letter6.Name = "Letter6";
-            this.Letter6.Size = new System.Drawing.Size(39, 42);
+            this.Letter6.Size = new System.Drawing.Size(40, 42);
             this.Letter6.TabIndex = 14;
             this.Letter6.Text = "L";
             this.Letter6.Click += new System.EventHandler(this.Letter6_Click);
@@ -163,20 +163,22 @@ namespace Racewords
             // Letter7
             // 
             this.Letter7.AutoSize = true;
-            this.Letter7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter7.BackColor = System.Drawing.Color.Transparent;
+            this.Letter7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Letter7.Location = new System.Drawing.Point(507, 497);
             this.Letter7.Name = "Letter7";
-            this.Letter7.Size = new System.Drawing.Size(39, 42);
+            this.Letter7.Size = new System.Drawing.Size(40, 42);
             this.Letter7.TabIndex = 15;
             this.Letter7.Text = "L";
             // 
             // Letter8
             // 
             this.Letter8.AutoSize = true;
-            this.Letter8.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter8.BackColor = System.Drawing.Color.Transparent;
+            this.Letter8.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Letter8.Location = new System.Drawing.Point(1033, 63);
             this.Letter8.Name = "Letter8";
-            this.Letter8.Size = new System.Drawing.Size(39, 42);
+            this.Letter8.Size = new System.Drawing.Size(40, 42);
             this.Letter8.TabIndex = 16;
             this.Letter8.Text = "L";
             this.Letter8.Click += new System.EventHandler(this.Letter8_Click);
@@ -185,10 +187,10 @@ namespace Racewords
             // 
             this.Letter9.AutoSize = true;
             this.Letter9.BackColor = System.Drawing.Color.Transparent;
-            this.Letter9.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter9.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Letter9.Location = new System.Drawing.Point(872, 463);
             this.Letter9.Name = "Letter9";
-            this.Letter9.Size = new System.Drawing.Size(39, 42);
+            this.Letter9.Size = new System.Drawing.Size(40, 42);
             this.Letter9.TabIndex = 17;
             this.Letter9.Text = "L";
             this.Letter9.Click += new System.EventHandler(this.Letter9_Click);
@@ -198,20 +200,20 @@ namespace Racewords
             this.Points.AutoSize = true;
             this.Points.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Points.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Points.Location = new System.Drawing.Point(1069, -4);
+            this.Points.Location = new System.Drawing.Point(1053, -4);
             this.Points.Name = "Points";
-            this.Points.Size = new System.Drawing.Size(152, 55);
+            this.Points.Size = new System.Drawing.Size(210, 55);
             this.Points.TabIndex = 18;
-            this.Points.Text = "label1";
+            this.Points.Text = "Points: 0";
             this.Points.Click += new System.EventHandler(this.Points_Click);
             // 
             // Letter10
             // 
             this.Letter10.AutoSize = true;
-            this.Letter10.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter10.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Letter10.Location = new System.Drawing.Point(249, 686);
             this.Letter10.Name = "Letter10";
-            this.Letter10.Size = new System.Drawing.Size(39, 42);
+            this.Letter10.Size = new System.Drawing.Size(40, 42);
             this.Letter10.TabIndex = 19;
             this.Letter10.Text = "L";
             this.Letter10.Click += new System.EventHandler(this.Letter10_Click);
@@ -223,9 +225,9 @@ namespace Racewords
             this.Life.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Life.Location = new System.Drawing.Point(0, -4);
             this.Life.Name = "Life";
-            this.Life.Size = new System.Drawing.Size(152, 55);
+            this.Life.Size = new System.Drawing.Size(189, 55);
             this.Life.TabIndex = 20;
-            this.Life.Text = "label1";
+            this.Life.Text = "Lives: 0";
             // 
             // LevelLabel
             // 
@@ -233,7 +235,7 @@ namespace Racewords
             this.LevelLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.LevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LevelLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LevelLabel.Location = new System.Drawing.Point(368, -4);
+            this.LevelLabel.Location = new System.Drawing.Point(389, -4);
             this.LevelLabel.Name = "LevelLabel";
             this.LevelLabel.Size = new System.Drawing.Size(100, 37);
             this.LevelLabel.TabIndex = 22;
