@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Racewords
 {
@@ -21,7 +22,7 @@ namespace Racewords
             {"C H I C", "W D Z I Ę K" }
         };
 
-        string[] letters = { "L", "A" , "I", "T", "C", "H","I", "E", "N", "U", };
+        string[] letters = { "L", "A", "I", "T", "C", "H", "I", "E", "N", "U", };
         string[] letterstranslation = { "K", "O", "P", "S", "W", "M", "N", "C", "D", "I", "Ę", "Z", "E", "L", "T" };
         int speed = 5;
         int letterspeed = 6;
@@ -31,6 +32,7 @@ namespace Racewords
         int k = 0;
         int lives = 3;
         int level = 0;
+        string collect = "";
         int skodaspeed = 35;
         public Form1()
         {
@@ -41,12 +43,14 @@ namespace Racewords
         //Main
         private void timer1_Tick(object sender, EventArgs e)
         {
+           
             LetterMovementAll();
             Lines();
             GamePlayAll();
+           
         }
 
-      
+
         //Keyboard 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -69,13 +73,13 @@ namespace Racewords
             }
         }
 
-        private void CollectWord(Label Letter)
+        private void CollectWord(Letters Letter)
         {
-            string key = key = word.ElementAt(k).Key; ;          
-            string value = value = word.ElementAt(k).Value;
-            string collect = "";
+            string key = word.ElementAt(k).Key;
+            string value = word.ElementAt(k).Value;
             string title = "";
             string levellabeltext = "";
+
             if (level == 0)
             {
                 levellabeltext = "Pierwszy poziom. Zbierz francuskie słowo.";
@@ -90,128 +94,116 @@ namespace Racewords
                 k = 0;
                 letterspeed = 6;
             }
-            LevelLabel.Text = levellabeltext;
+            this.LevelLabel.Text = levellabeltext;
             Title.Text = title;
-            Points.Text ="Punkty: "+ points;
+            Points.Text = "Punkty: " + points;
             Life.Text = "Życia: " + lives;
-            
-                if (Skoda.Bounds.IntersectsWith(Letter.Bounds))
-                {
-                    
-                    bump = Letter.Text;
-                    if (bump == collect.Split(' ')[i])
-                    {
-                        Word.Text = Word.Text + collect.Split(' ')[i];
-                        if (i == collect.Split(' ').Length - 1)
-                        {
-                            i = 0;
-                            points++;
-                            k++;
-                            Word.Text = null;
-                            letterspeed++;
-                            if (points == 1)
-                            {
-                                level++;
-                            }
-                        }
-                        else
-                        {
-                            i++;
-                        }
-                        Letters.InitializeLetter(Letter, letters);
-                        Letters.LettersMovement(Letter, letterspeed, letters);
-
-                    }
-                    else if (bump != collect.Split(' ')[i])
-                    {
-                        if (lives != 0)
-                        {
-                            lives--;
-                            Letters.InitializeLetter(Letter, letters);
-                            Letters.LettersMovement(Letter, letterspeed, letters);
-                        }
-                        else if (lives == 0)
-                        {
-                            Letter.BackColor = Color.Red;
-                            Letter.ForeColor = Color.White;
-                            Word.Text = "Koniec gry";
-                            timer1.Enabled = false;
-                        }
-
-                    }
-
-            }
-
-
-         
+            SkodaInteraction(Letter, key);   
         }
 
+        //Skoda Gameplay
+        private void SkodaInteraction(Letters Letter, string key)
+        {
+           
+            if (Skoda.Bounds.IntersectsWith(Letter.Bounds))
+            {
+               
+                bump = Letter.Text;
+                if (bump == collect.Split(' ')[i])
+                {
+
+                    Word.Text = Word.Text + collect.Split(' ')[i];
+                    if (i == collect.Split(' ').Length - 1)
+                    {
+                        i = 0;
+                        points++;
+                        k++;
+                        Word.Text = null;
+                        letterspeed++;
+                        if (points == 1)
+                        {
+                            level++;
+                        }
+                    }
+                    else
+                    {
+                        i++;
+                    }
+                    Letter.InitializeLetter(letters);
+                    Letter.LettersMovement(letterspeed, letters);
+
+                }
+                else if (bump != collect.Split(' ')[i])
+                {
+                    playSimpleSound("chat");
+                    if (lives != 0)
+                    {
+                        lives--;
+                        Letter.InitializeLetter(letters);
+                        Letter.LettersMovement(letterspeed, letters);
+                    }
+                    else if (lives == 0)
+                    {
+                        Letter.BackColor = Color.Red;
+                        Letter.ForeColor = Color.White;
+                        Word.Text = "Koniec gry";
+                        timer1.Enabled = false;
+                    }
+
+                }
+
+            }
+        }
+
+        private void playSimpleSound(string nazwa)
+        {
+            SoundPlayer simpleSound = new SoundPlayer($@"C:\Users\Zuzanna\Desktop\Racewords\Racewords\sounds\{nazwa}.wav");
+            simpleSound.Play();
+        }
 
         //Gameplay
         private void GamePlayAll()
         {
-            CollectWord(Letter1);
-            CollectWord(Letter2);
-            CollectWord(Letter3);
-            CollectWord(Letter4);
-            CollectWord(Letter5);
-            CollectWord(Letter6);
-            CollectWord(Letter7);
-            CollectWord(Letter8);
-            CollectWord(Letter9);
-            CollectWord(Letter10);
-
-
-
+            for (int i = 0; i < lettertab.Length; i++)
+            { CollectWord(lettertab[i]); }
         }
         private void Lines()
         {
-            pictureBox1.Top = Movement.MoveSingleLine(pictureBox1.Top, speed);
-            pictureBox2.Top = Movement.MoveSingleLine(pictureBox2.Top, speed);
-            pictureBox3.Top = Movement.MoveSingleLine(pictureBox3.Top, speed);
-            pictureBox4.Top = Movement.MoveSingleLine(pictureBox4.Top, speed);
-            pictureBox5.Top = Movement.MoveSingleLine(pictureBox5.Top, speed);
+            for (int i = 0; i < linestab.Length; i++)
+            { linestab[i].MoveLine(speed); }
         }
+
+        //Letters Movement
         private void LetterMovementAll()
         {
-
             if (level == 1)
             {
                 letters = letterstranslation;
             }
-           
-            Letters.LettersMovement(Letter1, letterspeed+1, letters);
-            Letters.LettersMovement(Letter2, letterspeed, letters);
-            Letters.LettersMovement(Letter3, letterspeed-1, letters);
-            Letters.LettersMovement(Letter4, letterspeed, letters);
-            Letters.LettersMovement(Letter5, letterspeed+3, letters);
-            Letters.LettersMovement(Letter6, letterspeed, letters);
-            Letters.LettersMovement(Letter7, letterspeed, letters);
-            Letters.LettersMovement(Letter8, letterspeed+1, letters);
-            Letters.LettersMovement(Letter9, letterspeed, letters);
-            Letters.LettersMovement(Letter10, letterspeed, letters);
 
+            for (int i = 0; i < lettertab.Length; i++)
+            {
+                if (i < lettertab.Length / 3)
+                { lettertab[i].LettersMovement(letterspeed, letters); }
+                else if (i >= lettertab.Length / 3 & i < 2 * lettertab.Length / 3)
+                { lettertab[i].LettersMovement(letterspeed + 1, letters); }
+                else if (i >= 2 * lettertab.Length / 3)
+                { lettertab[i].LettersMovement(letterspeed - 1, letters); }
+            }
         }
+
+        //Letters Initialization
         private void InitializeAll()
         {
-           if (level == 1)
+            if (level == 1)
             {
                 letters = letterstranslation;
             }
-
-            Letters.InitializeLetter(Letter1, letters);
-            Letters.InitializeLetter(Letter2, letters);
-            Letters.InitializeLetter(Letter3, letters);
-            Letters.InitializeLetter(Letter4, letters);
-            Letters.InitializeLetter(Letter5, letters);
-            Letters.InitializeLetter(Letter6, letters);
-            Letters.InitializeLetter(Letter7, letters);
-            Letters.InitializeLetter(Letter8, letters);
-            Letters.InitializeLetter(Letter9, letters);
-            Letters.InitializeLetter(Letter10, letters);
+            for (int i = 0; i < lettertab.Length; i++)
+            { lettertab[i].InitializeLetter(letters); ; }
 
         }
-        
+
 
         //Components
         private void Skoda_Click(object sender, EventArgs e) { }
@@ -234,15 +226,8 @@ namespace Racewords
         private void Letter9_Click(object sender, EventArgs e) { }
         private void Points_Click(object sender, EventArgs e) { }
         private void Letter10_Click(object sender, EventArgs e) { }
-
-        private void Skoda_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LevelLabel_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void Skoda_Click_1(object sender, EventArgs e) { }
+        private void LevelLabel_Click(object sender, EventArgs e) { }
     }
+
 }
