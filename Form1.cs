@@ -12,7 +12,7 @@ using System.Media;
 namespace Racewords
 {
 
-    public partial class Form1 : Form
+    public partial class Form1 : Gameplay
     {
         Dictionary<string, string> word = new Dictionary<string, string>(){
             {"C H A T", "K O T"},
@@ -94,6 +94,13 @@ namespace Racewords
                 k = 0;
                 letterspeed = 6;
             }
+            else if (level == 2)
+            {
+                levellabeltext = "Drugi poziom. Zbierz francuskie słowo ze słuchu.";
+                title = "";
+                collect = key;
+
+            }
             this.LevelLabel.Text = levellabeltext;
             Title.Text = title;
             Points.Text = "Punkty: " + points;
@@ -111,7 +118,7 @@ namespace Racewords
                 bump = Letter.Text;
                 if (bump == collect.Split(' ')[i])
                 {
-
+                    
                     Word.Text = Word.Text + collect.Split(' ')[i];
                     if (i == collect.Split(' ').Length - 1)
                     {
@@ -123,6 +130,9 @@ namespace Racewords
                         if (points == 1)
                         {
                             level++;
+
+                            points = 0;
+                            playSimpleSound(key.ToLower().Replace(" ",""));
                         }
                     }
                     else
@@ -135,7 +145,6 @@ namespace Racewords
                 }
                 else if (bump != collect.Split(' ')[i])
                 {
-                    playSimpleSound("chat");
                     if (lives != 0)
                     {
                         lives--;

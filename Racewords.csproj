@@ -46,8 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Letters.cs" />
-    <Compile Include="Movement.cs" />
+    <Compile Include="Gameplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Letters.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Movement.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
