@@ -102,10 +102,13 @@
     <None Include="Skoda.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\A.bmp" />
+    <None Include="Alabama.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Alabama.mp3" />
+    <None Include="Skoda_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

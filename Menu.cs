@@ -12,7 +12,9 @@ namespace Racewords
 {
     public partial class Menu : Form
     {
-        Image SkodaGreen =  
+         //this.Skoda.Image = global::Racewords.Properties.Resources.Skoda;
+        Image SkodaGreen = global::Racewords.Properties.Resources.Skoda_yellow;
+       
         public Menu()
         {
             InitializeComponent();
@@ -40,6 +42,11 @@ namespace Racewords
         {
             Green.Checked = false;
             this.Show();
+
+        }
+
+        private void Yellow_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

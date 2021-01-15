@@ -78,10 +78,7 @@ namespace Racewords
         //Letters Movement
         private void LetterMovementAll()
         {
-            if (level == 1)
-            {
-                letters = letterstranslation;
-            }
+           
 
             for (int i = 0; i < lettertab.Length; i++)
             {
@@ -97,10 +94,7 @@ namespace Racewords
         //Letters Initialization
         private void InitializeAll()
         {
-            if (level == 1)
-            {
-                letters = letterstranslation;
-            }
+            
             for (int i = 0; i < lettertab.Length; i++)
             { lettertab[i].InitializeLetter(letters); ; }
 

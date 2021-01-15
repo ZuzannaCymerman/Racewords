@@ -31,6 +31,7 @@ namespace Racewords
         {
             this.Green = new System.Windows.Forms.CheckBox();
             this.Start = new System.Windows.Forms.Button();
+            this.Yellow = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // Green
@@ -58,11 +59,23 @@ namespace Racewords
             this.Start.UseVisualStyleBackColor = false;
             this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
+            // Yellow
+            // 
+            this.Yellow.AutoSize = true;
+            this.Yellow.Location = new System.Drawing.Point(612, 99);
+            this.Yellow.Name = "Yellow";
+            this.Yellow.Size = new System.Drawing.Size(52, 17);
+            this.Yellow.TabIndex = 2;
+            this.Yellow.Text = "Żółta";
+            this.Yellow.UseVisualStyleBackColor = true;
+            this.Yellow.CheckedChanged += new System.EventHandler(this.Yellow_CheckedChanged);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Yellow);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.Green);
             this.Name = "Menu";
@@ -77,5 +90,6 @@ namespace Racewords
 
         private System.Windows.Forms.CheckBox Green;
         private System.Windows.Forms.Button Start;
+        private System.Windows.Forms.CheckBox Yellow;
     }
 }

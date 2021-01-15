@@ -44,7 +44,7 @@ namespace Racewords
             this.Letter9 = new Letters();
             this.Points = new Letters();
             this.Letter10 = new Letters();
-            this.lettertab = new Letters[] { this.Letter1, this.Letter2, this.Letter3, this.Letter4, this.Letter5, this.Letter6, this.Letter7, this.Letter8, this.Letter9, this.Letter10 };
+            this.lettertab = new Letters[] { this.Letter1, this.Letter2, this.Letter3, this.Letter4, this.Letter5, this.Letter6, this.Letter7, this.Letter8, this.Letter9, this.Letter10};
             this.Life = new Letters();
             this.LevelLabel = new Letters();
             this.Skoda = new System.Windows.Forms.PictureBox();
@@ -223,6 +223,7 @@ namespace Racewords
             this.Letter10.Text = "L";
             this.Letter10.Click += new System.EventHandler(this.Letter10_Click);
             // 
+          
             // Life
             // 
             this.Life.AutoSize = true;

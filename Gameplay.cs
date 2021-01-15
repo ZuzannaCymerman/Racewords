@@ -21,9 +21,9 @@ namespace Racewords
             {"C H I E N", "P I E S" },
             {"C H I C", "W D Z I Ę K" }
         };
-
-        public string[] letters = { "L", "A", "I", "T", "C", "H", "I", "E", "N", "U", };
-        public string[] letterstranslation = { "K", "O", "P", "S", "W", "M", "N", "C", "D", "I", "Ę", "Z", "E", "L", "T" };
+        //"K", "O", "P", "S", "W", "M", "D",
+        public static Random r = new Random();
+        public string[] letters = { "L", "A", "I", "T", "C", "H", "I", "E", "N", "U",  "I", "Ę", "Z", "K", "O", "P", "S", "W", "M", "D" };
         public int speed = 5;
         public int letterspeed = 6;
         public string bump = "";
@@ -39,9 +39,10 @@ namespace Racewords
         public string title = "";
         public string levellabeltext = "";
         private string directory = System.IO.Path.GetDirectoryName(Application.StartupPath).Replace("bin","");
-        public static Random r = new Random();
-        public static int k = r.Next(0, 4);
-        public static int l = k;
+        public static int random = r.Next(0, 4);
+        public static int k = random;
+        public int l = random;
+
         public void GamePlay(Letters Letter)
         {
             
@@ -59,7 +60,7 @@ namespace Racewords
                 levellabeltext = "Drugi poziom. Zbierz polskie słowo.";
                 title = key;
                 collect = value;
-                k = l;
+                k = l;   
                 letterspeed = 6;
             }
             else if (level == 2)
@@ -88,18 +89,24 @@ namespace Racewords
 
                     if (i == collect.Split(' ').Length - 1)
                     {
+                        
                         i = 0;
                         points++;
                         if (k != 4) k++;
-                        else k = 0;
+                        else k = 0;   
                         WordLabel.Text = null;
                         letterspeed++;
-                        if (points == 3)
+                        Console.WriteLine("po zebraniu:" + k);
+                        if (points<2) PlaySimpleSound(word.ElementAt(k).Key.ToLower().Replace(" ", ""));
+
+                        if (points == 2)
                         {
                             level++;
                             points = 0;
-                           PlaySimpleSound((word.ElementAt(k).Key).ToLower().Replace(" ", ""));
+                            PlaySimpleSound(word.ElementAt(l).Key.ToLower().Replace(" ", ""));
+
                         }
+                        
                     }
                     else
                     {
@@ -122,6 +129,7 @@ namespace Racewords
                     }
                     else if (lives == 0)
                     {
+                        PlaySimpleSound("bump");
                         PlaySimpleSound(key.ToLower().Replace(" ", ""));
                         Letter.BackColor = Color.Red;
                         Letter.ForeColor = Color.White;
