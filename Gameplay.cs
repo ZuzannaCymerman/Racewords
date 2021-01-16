@@ -87,7 +87,7 @@ namespace Racewords
                
                 if (bump == collect.Split(' ')[i])
                 {
-                   // PlaySimpleSound("point");
+                   PlaySimpleSound("point");
                     WordLabel.Text = WordLabel.Text + collect.Split(' ')[i];
 
                     if (i == collect.Split(' ').Length - 1)
