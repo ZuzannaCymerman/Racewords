@@ -12,19 +12,18 @@ namespace Racewords
 {
     public partial class Menu : Form
     {
-         //this.Skoda.Image = global::Racewords.Properties.Resources.Skoda;
-        Image SkodaGreen = global::Racewords.Properties.Resources.Skoda_yellow;
-       
+        Image SkodaYellow = global::Racewords.Properties.Resources.Skoda_yellow;
+        Image SkodaGreen = global::Racewords.Properties.Resources.Skoda_green;
+        Image SkodaRed = global::Racewords.Properties.Resources.Skoda;
+        Image SkodaImage;
+        
         public Menu()
         {
             InitializeComponent();
+            StartText.Text = "By rozpocząć grę, wciśnij start.";
         }
 
-        private void Green_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
-      
+       
         private void Menu_Load(object sender, EventArgs e)
         {
 
@@ -32,20 +31,47 @@ namespace Racewords
 
         private void Start_Click(object sender, EventArgs e)
         {
-            Game new_game = new Game();
-            new_game.Show();
-            this.Hide();
-            new_game.FormClosed += new FormClosedEventHandler(new_game_FormClosed);
-        }
+            
+            if (Green.Checked || Yellow.Checked || Red.Checked)
+            {
+                Game new_game = new Game();
+                new_game.Skoda.Image = SkodaRed;
+                new_game.Skoda.Image = SkodaImage;
+                new_game.Show();
+                this.Hide();
+                new_game.FormClosed += new FormClosedEventHandler(new_game_FormClosed);
+                      
+            }
 
+
+            else
+            {
+                StartText.Text = "error";
+            }
+        }   
         void new_game_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Green.Checked = false;
+
             this.Show();
 
         }
 
         private void Yellow_CheckedChanged(object sender, EventArgs e)
+        {
+            SkodaImage = SkodaYellow;
+        }
+
+        private void Green_CheckedChanged(object sender, EventArgs e)
+        {
+            SkodaImage = SkodaGreen;
+        }
+
+        private void Red_CheckedChanged(object sender, EventArgs e)
+        {
+            SkodaImage = SkodaRed;
+        }
+
+        private void StartText_Click(object sender, EventArgs e)
         {
 
         }

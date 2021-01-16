@@ -374,7 +374,7 @@ namespace Racewords
         private Letters Points;
         private Letters Letter10;
         private Letters Life;
-        private System.Windows.Forms.PictureBox Skoda;
+        public System.Windows.Forms.PictureBox Skoda;
         private Letters LevelLabel;
         private Letters[] lettertab;
         private Movement[] linestab;

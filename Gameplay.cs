@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Media;
 
 namespace Racewords
-{
+{ 
     public class Gameplay : Form
     {
 
@@ -23,7 +23,9 @@ namespace Racewords
         };
         //"K", "O", "P", "S", "W", "M", "D",
         public static Random r = new Random();
-        public string[] letters = { "L", "A", "I", "T", "C", "H", "I", "E", "N", "U",  "I", "Ę", "Z", "K", "O", "P", "S", "W", "M", "D" };
+        public string[] letters = { "L", "A", "I", "T", "C", "H", "I", "E", "N", "U" };
+        public string[] letters2= { "L", "A", "I", "T", "C", "H", "I", "E", "N", "U" };
+        public string[] letterstranslation = { "L", "I", "T", "I", "E", "N","Ę", "Z", "K", "O", "P", "S", "W", "M", "D", "C"};
         public int speed = 5;
         public int letterspeed = 6;
         public string bump = "";
@@ -45,7 +47,6 @@ namespace Racewords
 
         public void GamePlay(Letters Letter)
         {
-            
              string key = word.ElementAt(k).Key;
              string value = word.ElementAt(k).Value;
 
@@ -58,14 +59,14 @@ namespace Racewords
             else if (level == 1)
             {
                 levellabeltext = "Drugi poziom. Zbierz polskie słowo.";
+                letters = letterstranslation;
                 title = key;
                 collect = value;
-                k = l;   
                 letterspeed = 6;
             }
             else if (level == 2)
             {
-                k = l;
+                letters = letters2;
                 levellabeltext = "Trzeci poziom. Zbierz francuskie słowo ze słuchu.";
                 title = "";
                 collect = key;
@@ -84,7 +85,7 @@ namespace Racewords
                
                 if (bump == collect.Split(' ')[i])
                 {
-                    PlaySimpleSound("point");
+                   // PlaySimpleSound("point");
                     WordLabel.Text = WordLabel.Text + collect.Split(' ')[i];
 
                     if (i == collect.Split(' ').Length - 1)
@@ -96,14 +97,15 @@ namespace Racewords
                         else k = 0;   
                         WordLabel.Text = null;
                         letterspeed++;
-                        Console.WriteLine("po zebraniu:" + k);
-                        if (points<2) PlaySimpleSound(word.ElementAt(k).Key.ToLower().Replace(" ", ""));
+                       
+                        if (points<1) PlaySimpleSound(word.ElementAt(k).Key.ToLower().Replace(" ", ""));
 
-                        if (points == 2)
+                        if (points == 1)
                         {
+                            k = l;
                             level++;
                             points = 0;
-                            PlaySimpleSound(word.ElementAt(l).Key.ToLower().Replace(" ", ""));
+                            PlaySimpleSound(word.ElementAt(k).Key.ToLower().Replace(" ", ""));
 
                         }
                         
