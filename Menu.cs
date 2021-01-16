@@ -16,15 +16,13 @@ namespace Racewords
         Image SkodaGreen = global::Racewords.Properties.Resources.Skoda_green;
         Image SkodaRed = global::Racewords.Properties.Resources.Skoda;
         Image SkodaImage;
-        
+
         public Menu()
         {
             InitializeComponent();
-            StartText.Text = "By rozpocząć grę, wciśnij start.";
-        }
 
-       
-        private void Menu_Load(object sender, EventArgs e)
+        }
+            private void Menu_Load(object sender, EventArgs e)
         {
 
         }
@@ -34,6 +32,7 @@ namespace Racewords
             
             if (Green.Checked || Yellow.Checked || Red.Checked)
             {
+                
                 Game new_game = new Game();
                 new_game.Skoda.Image = SkodaRed;
                 new_game.Skoda.Image = SkodaImage;
@@ -42,16 +41,18 @@ namespace Racewords
                 new_game.FormClosed += new FormClosedEventHandler(new_game_FormClosed);
                       
             }
-
-
             else
             {
-                StartText.Text = "error";
+                StartText.Text = "Nie wybrałeś koloru Skody.";
             }
         }   
         void new_game_FormClosed(object sender, FormClosedEventArgs e)
         {
 
+            if (Green.Checked || Yellow.Checked || Red.Checked)
+            {
+                StartText.Text = "Kliknij START GAME, by rozpocząć ponownie.";
+            }
             this.Show();
 
         }

@@ -18,6 +18,7 @@ namespace Racewords
         public Game()
         {
             InitializeComponent();
+            letters = lettersfrench;
             InitializeAll();   
         }
 

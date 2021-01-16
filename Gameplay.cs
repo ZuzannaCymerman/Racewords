@@ -23,9 +23,9 @@ namespace Racewords
         };
         //"K", "O", "P", "S", "W", "M", "D",
         public static Random r = new Random();
-        public string[] letters = { "L", "A", "I", "T", "C", "H", "I", "E", "N", "U" };
-        public string[] letters2= { "L", "A", "I", "T", "C", "H", "I", "E", "N", "U" };
-        public string[] letterstranslation = { "L", "I", "T", "I", "E", "N","Ę", "Z", "K", "O", "P", "S", "W", "M", "D", "C"};
+        public string[] letters;
+        public string[] lettersfrench= { "L", "A", "I", "T", "C", "H", "I", "E", "N", "U" };
+        public string[] letterspolish = { "L", "I", "T", "I", "E", "N", "Ę", "Z", "K", "O", "P", "S", "W", "M", "D", "C" };
         public int speed = 5;
         public int letterspeed = 6;
         public string bump = "";
@@ -44,6 +44,7 @@ namespace Racewords
         public static int random = r.Next(0, 4);
         public static int k = random;
         public int l = random;
+        public int pointsmax = 3;
 
         public void GamePlay(Letters Letter)
         {
@@ -52,6 +53,7 @@ namespace Racewords
 
             if (level == 0)
             {
+                letters = lettersfrench;
                 levellabeltext = "Pierwszy poziom. Zbierz francuskie słowo.";
                 title = key + " - " + value;
                 collect = key;
@@ -59,14 +61,14 @@ namespace Racewords
             else if (level == 1)
             {
                 levellabeltext = "Drugi poziom. Zbierz polskie słowo.";
-                letters = letterstranslation;
+                letters = letterspolish;
                 title = key;
                 collect = value;
                 letterspeed = 6;
             }
             else if (level == 2)
             {
-                letters = letters2;
+                letters = lettersfrench;
                 levellabeltext = "Trzeci poziom. Zbierz francuskie słowo ze słuchu.";
                 title = "";
                 collect = key;
@@ -98,9 +100,9 @@ namespace Racewords
                         WordLabel.Text = null;
                         letterspeed++;
                        
-                        if (points<1) PlaySimpleSound(word.ElementAt(k).Key.ToLower().Replace(" ", ""));
+                        if (points<pointsmax) PlaySimpleSound(word.ElementAt(k).Key.ToLower().Replace(" ", ""));
 
-                        if (points == 1)
+                        if (points == pointsmax)
                         {
                             k = l;
                             level++;
