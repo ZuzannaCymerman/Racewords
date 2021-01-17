@@ -85,8 +85,11 @@ namespace Racewords
         /// <summary>
         /// Obiekt label'a, który wyświetla zebrane literki.
         /// </summary>
-        public bool WinGame = false;
         public Letters WordLabel;
+        /// <summary>
+        /// Zmienna, która odpowiada za widoczność labela, który pojawia się po wygranej grze.
+        /// </summary>
+        public bool WinGame = false;
         /// <summary>
         /// Obiekt timera.
         /// </summary>
