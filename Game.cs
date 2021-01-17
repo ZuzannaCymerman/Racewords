@@ -12,7 +12,7 @@ using System.Media;
 namespace Racewords
 {
     /// <summary>
-    /// Pole gry.
+    /// Pole gry. Dziedziczy po klasie Gameplay.
     /// </summary>
     public partial class Game : Gameplay
     {

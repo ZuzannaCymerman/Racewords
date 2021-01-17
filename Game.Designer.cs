@@ -345,6 +345,7 @@ namespace Racewords
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Game";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

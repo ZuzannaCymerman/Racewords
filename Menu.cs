@@ -41,6 +41,7 @@ namespace Racewords
         /// <summary>
         /// Inicjalizacja obiektów.
         /// </summary>
+
         public Menu()
         {
             InitializeComponent();
@@ -65,6 +66,7 @@ namespace Racewords
                 new_game.Skoda.Image = SkodaRed;
                 new_game.Skoda.Image = SkodaImage;
                 new_game.letterspeed = inputspeed;
+                new_game.initletterspeed = inputspeed;
                 new_game.Show();
                 this.Hide();
                 Green.Checked = false;
@@ -142,5 +144,7 @@ namespace Racewords
             inputspeed = comboBox1.SelectedIndex + 1;
 
         }
+
+ 
     }
 }

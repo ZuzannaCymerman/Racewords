@@ -46,9 +46,13 @@ namespace Racewords
         /// Szybkość spadania literek. Można ją wybrać z Menu.
         /// </summary>
         public int letterspeed;
+        
+        
+        public int initletterspeed;
         /// <summary>
         /// Zmienna odpowiadająca literce, na którą najedzie samochd.
         /// </summary>
+
         public string bump = "";
         /// <summary>
         /// Zmienna punktów. Każde pełne słowo => +1 punkt.
@@ -65,7 +69,7 @@ namespace Racewords
         /// <summary>
         /// Zmienna poziomu.
         /// </summary>
-        public int level = 0;
+        public int level = 1;
         /// <summary>
         /// Zmienna słowa, które jest akurat zbierane.
         /// </summary>
@@ -136,7 +140,7 @@ namespace Racewords
                 letters = letterspolish;
                 title = key;
                 collect = value;
-                letterspeed = letterspeed -pointsmax -1;
+                letterspeed = initletterspeed;
             }
             else if (level == 2)
             {
@@ -144,7 +148,7 @@ namespace Racewords
                 levellabeltext = "Trzeci poziom. Zbierz francuskie słowo ze słuchu.";
                 title = "";
                 collect = key;
-                letterspeed = letterspeed -pointsmax -1;
+                letterspeed = initletterspeed;
             }
 
             CarInteraction(Letter);

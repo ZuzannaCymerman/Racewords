@@ -41,10 +41,10 @@ namespace Racewords
         /// <summary>
         /// Funkcja opisująca ruch literki zależny od wybranej szybkości. Gdy literka dotrze do końca pola gry, następuje wywołanie funkcji LetterLocation.
         /// </summary>
-        /// <param name="point">położenie literki</param>
-        /// <param name="letterspeed">szybkość spadania literki</param>
-        /// <returns></returns>
-        public Point LetterMovement(Point point, int letterspeed)
+        /// <param name="point"></param>
+        /// <param name="speed"></param>
+        /// <returns>położenie literki</returns>
+        public Point LetterMovement(Point point, int speed)
         {
             if (point.Y >=1280)
                {
@@ -53,7 +53,7 @@ namespace Racewords
                }
             else
               {
-                  point.Y += (letterspeed);
+                  point.Y += (speed);
               }
                 return point;   
         }
