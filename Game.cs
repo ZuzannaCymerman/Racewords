@@ -82,6 +82,7 @@ namespace Racewords
             Title.Text = title;
             Points.Text = "Punkty: " + points;
             Life.Text = "Życia: " + lives;
+            Win.Visible = WinGame;
         }
 
       
@@ -159,6 +160,11 @@ namespace Racewords
         private void LevelLabel_Click(object sender, EventArgs e) { }
 
         private void Letter11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Win_Click(object sender, EventArgs e)
         {
 
         }

@@ -53,6 +53,7 @@ namespace Racewords
             this.pictureBox2 = new Racewords.Movement();
             this.pictureBox3 = new Racewords.Movement();
             this.Letter11 = new Racewords.Letters();
+            this.Win = new Racewords.Letters();
             ((System.ComponentModel.ISupportInitialize)(this.Skoda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -236,7 +237,7 @@ namespace Racewords
             this.LevelLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.LevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.LevelLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LevelLabel.Location = new System.Drawing.Point(389, -4);
+            this.LevelLabel.Location = new System.Drawing.Point(281, -4);
             this.LevelLabel.Name = "LevelLabel";
             this.LevelLabel.Size = new System.Drawing.Size(100, 37);
             this.LevelLabel.TabIndex = 22;
@@ -317,12 +318,27 @@ namespace Racewords
             this.Letter11.Text = "L";
             this.Letter11.Click += new System.EventHandler(this.Letter11_Click);
             // 
+            // Win
+            // 
+            this.Win.AutoSize = true;
+            this.Win.BackColor = System.Drawing.Color.Green;
+            this.Win.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Win.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Win.Location = new System.Drawing.Point(225, 117);
+            this.Win.Name = "Win";
+            this.Win.Size = new System.Drawing.Size(840, 42);
+            this.Win.TabIndex = 24;
+            this.Win.Text = "Wygrałeś! Aby wrócić do menu, zamknij okno gry.";
+            this.Win.Visible = false;
+            this.Win.Click += new System.EventHandler(this.Win_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1264, 985);
+            this.Controls.Add(this.Win);
             this.Controls.Add(this.Letter11);
             this.Controls.Add(this.LevelLabel);
             this.Controls.Add(this.Skoda);
@@ -388,6 +404,7 @@ namespace Racewords
         private Letters[] lettertab;
         private Movement[] linestab;
         private Letters Letter11;
+        private Letters Win;
     }
 }
 

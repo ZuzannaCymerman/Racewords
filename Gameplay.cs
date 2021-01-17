@@ -65,7 +65,7 @@ namespace Racewords
         /// <summary>
         /// Zmienna żyć.
         /// </summary>
-        public int lives = 3;
+        public int lives = 5;
         /// <summary>
         /// Zmienna poziomu.
         /// </summary>
@@ -85,6 +85,7 @@ namespace Racewords
         /// <summary>
         /// Obiekt label'a, który wyświetla zebrane literki.
         /// </summary>
+        public bool WinGame = false;
         public Letters WordLabel;
         /// <summary>
         /// Obiekt timera.
@@ -182,11 +183,17 @@ namespace Racewords
 
                         if (points == pointsmax)
                         {
-                            k = l;
-                            level++;
-                            points = 0;
-                            PlaySimpleSound(word.ElementAt(k).Key.ToLower().Replace(" ", ""));
-
+                            if (level == 2)
+                            {
+                                timer.Enabled = false;
+                                WinGame = true;
+                            }
+                            else {
+                                k = l;
+                                level++;
+                                points = 0;
+                                PlaySimpleSound(word.ElementAt(k).Key.ToLower().Replace(" ", ""));
+                            }
                         }
                         
                     }
