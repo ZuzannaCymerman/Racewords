@@ -46,13 +46,13 @@ namespace Racewords
         /// Szybkość spadania literek. Można ją wybrać z Menu.
         /// </summary>
         public int letterspeed;
-        
-        
+        /// <summary>
+        /// Początkowa wartość prędkości (powrót do niej przy nowym poziomie)
+        /// </summary>
         public int initletterspeed;
         /// <summary>
         /// Zmienna odpowiadająca literce, na którą najedzie samochd.
         /// </summary>
-
         public string bump = "";
         /// <summary>
         /// Zmienna punktów. Każde pełne słowo => +1 punkt.
@@ -69,7 +69,7 @@ namespace Racewords
         /// <summary>
         /// Zmienna poziomu.
         /// </summary>
-        public int level = 1;
+        public int level = 0;
         /// <summary>
         /// Zmienna słowa, które jest akurat zbierane.
         /// </summary>
