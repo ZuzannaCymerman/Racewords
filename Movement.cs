@@ -9,11 +9,22 @@ using System.Drawing;
 using System.Windows.Forms;
 namespace Racewords
 {
+    /// <summary>
+    /// Klasa opisująca zachowanie ruchu ulicy. Na ulicy znajduje się 5 linii tej klasy, która dziedziczy po klasie PictureBox.
+    /// </summary>
     public class Movement : PictureBox
     {
-     
+     /// <summary>
+     /// Konstruktor klasy Movement.
+     /// </summary>
        public Movement(){ }
-        public static int MoveSingleLine(int top, int speed)
+    /// <summary>
+    /// Ruch linii.
+    /// </summary>
+    /// <param name="top">odległość od górnej krawędzi pola gry</param>
+    /// <param name="speed">prędkość linii</param>
+    /// <returns>odległość od górnej krawędzi pola gry</returns>
+        public int MoveSingleLine(int top, int speed)
         {
             if (top >= 1240)
             {
@@ -25,7 +36,10 @@ namespace Racewords
             }
             return top;
         }
-       
+       /// <summary>
+       /// Wywołanie funkcji MoveSingleLine i przypisanie jej do parametru Top danej linii.
+       /// </summary>
+       /// <param name="speed"></param>
         public void MoveLine(int speed)
         {
            this.Top = MoveSingleLine(this.Top, speed);

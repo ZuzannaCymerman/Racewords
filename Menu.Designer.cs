@@ -36,6 +36,8 @@ namespace Racewords
             this.StartText = new System.Windows.Forms.Label();
             this.chooseSkoda = new System.Windows.Forms.Label();
             this.title = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.speedLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Green
@@ -44,7 +46,7 @@ namespace Racewords
             this.Green.BackColor = System.Drawing.Color.Silver;
             this.Green.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Green.ForeColor = System.Drawing.Color.Green;
-            this.Green.Location = new System.Drawing.Point(561, 155);
+            this.Green.Location = new System.Drawing.Point(629, 146);
             this.Green.Name = "Green";
             this.Green.Size = new System.Drawing.Size(72, 20);
             this.Green.TabIndex = 0;
@@ -57,7 +59,7 @@ namespace Racewords
             this.Start.BackColor = System.Drawing.Color.Green;
             this.Start.Font = new System.Drawing.Font("Segoe UI Emoji", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Start.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Start.Location = new System.Drawing.Point(40, 120);
+            this.Start.Location = new System.Drawing.Point(12, 101);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(342, 100);
             this.Start.TabIndex = 1;
@@ -71,7 +73,7 @@ namespace Racewords
             this.Yellow.BackColor = System.Drawing.Color.Silver;
             this.Yellow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Yellow.ForeColor = System.Drawing.Color.Yellow;
-            this.Yellow.Location = new System.Drawing.Point(561, 195);
+            this.Yellow.Location = new System.Drawing.Point(629, 181);
             this.Yellow.Name = "Yellow";
             this.Yellow.Size = new System.Drawing.Size(60, 20);
             this.Yellow.TabIndex = 2;
@@ -85,7 +87,7 @@ namespace Racewords
             this.Red.BackColor = System.Drawing.Color.Silver;
             this.Red.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Red.ForeColor = System.Drawing.Color.DarkRed;
-            this.Red.Location = new System.Drawing.Point(561, 240);
+            this.Red.Location = new System.Drawing.Point(629, 217);
             this.Red.Name = "Red";
             this.Red.Size = new System.Drawing.Size(86, 20);
             this.Red.TabIndex = 3;
@@ -113,7 +115,7 @@ namespace Racewords
             this.chooseSkoda.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.chooseSkoda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.chooseSkoda.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.chooseSkoda.Location = new System.Drawing.Point(515, 110);
+            this.chooseSkoda.Location = new System.Drawing.Point(609, 107);
             this.chooseSkoda.Name = "chooseSkoda";
             this.chooseSkoda.Size = new System.Drawing.Size(191, 24);
             this.chooseSkoda.TabIndex = 5;
@@ -130,12 +132,51 @@ namespace Racewords
             this.title.TabIndex = 6;
             this.title.Text = "RACEWORDS";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"});
+            this.comboBox1.Location = new System.Drawing.Point(373, 145);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 7;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // speedLabel
+            // 
+            this.speedLabel.AutoSize = true;
+            this.speedLabel.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.speedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.speedLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.speedLabel.Location = new System.Drawing.Point(369, 107);
+            this.speedLabel.Name = "speedLabel";
+            this.speedLabel.Size = new System.Drawing.Size(220, 24);
+            this.speedLabel.TabIndex = 8;
+            this.speedLabel.Text = "Wybierz prędkość literek:";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(803, 294);
+            this.ClientSize = new System.Drawing.Size(865, 319);
+            this.Controls.Add(this.speedLabel);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.title);
             this.Controls.Add(this.chooseSkoda);
             this.Controls.Add(this.StartText);
@@ -160,5 +201,7 @@ namespace Racewords
         private System.Windows.Forms.Label StartText;
         private System.Windows.Forms.Label chooseSkoda;
         private System.Windows.Forms.Label title;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label speedLabel;
     }
 }

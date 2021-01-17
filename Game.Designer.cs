@@ -31,32 +31,28 @@ namespace Racewords
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.Letter2 = new Letters();
-            this.Letter1 = new Letters();
-            this.Letter3 = new Letters();
-            this.Word = new Letters();
-            this.Letter4 = new Letters();
-            this.Letter5 = new Letters();
-            this.Title = new Letters();
-            this.Letter6 = new Letters();
-            this.Letter7 = new Letters();
-            this.Letter8 = new Letters();
-            this.Letter9 = new Letters();
-            this.Points = new Letters();
-            this.Letter10 = new Letters();
-            this.lettertab = new Letters[] { this.Letter1, this.Letter2, this.Letter3, this.Letter4, this.Letter5, this.Letter6, this.Letter7, this.Letter8, this.Letter9, this.Letter10};
-            this.Life = new Letters();
-            this.LevelLabel = new Letters();
+            this.Letter2 = new Racewords.Letters();
+            this.Letter1 = new Racewords.Letters();
+            this.Letter3 = new Racewords.Letters();
+            this.Word = new Racewords.Letters();
+            this.Letter4 = new Racewords.Letters();
+            this.Letter5 = new Racewords.Letters();
+            this.Title = new Racewords.Letters();
+            this.Letter6 = new Racewords.Letters();
+            this.Letter7 = new Racewords.Letters();
+            this.Letter8 = new Racewords.Letters();
+            this.Letter9 = new Racewords.Letters();
+            this.Points = new Racewords.Letters();
+            this.Letter10 = new Racewords.Letters();
+            this.Life = new Racewords.Letters();
+            this.LevelLabel = new Racewords.Letters();
             this.Skoda = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new Movement();
-            this.pictureBox1 = new Movement();
-            this.pictureBox5 = new Movement();
-            this.pictureBox2 = new Movement();
-            this.pictureBox3 = new Movement();
-            this.linestab = new Movement[] { this.pictureBox1, this.pictureBox2, this.pictureBox3, this.pictureBox4, this.pictureBox5 };
-            this.Car = this.Skoda;
-            this.WordLabel = this.Word;
-            this.timer = this.timer1;
+            this.pictureBox4 = new Racewords.Movement();
+            this.pictureBox1 = new Racewords.Movement();
+            this.pictureBox5 = new Racewords.Movement();
+            this.pictureBox2 = new Racewords.Movement();
+            this.pictureBox3 = new Racewords.Movement();
+            this.Letter11 = new Racewords.Letters();
             ((System.ComponentModel.ISupportInitialize)(this.Skoda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -223,7 +219,6 @@ namespace Racewords
             this.Letter10.Text = "L";
             this.Letter10.Click += new System.EventHandler(this.Letter10_Click);
             // 
-          
             // Life
             // 
             this.Life.AutoSize = true;
@@ -310,34 +305,47 @@ namespace Racewords
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // Form1
+            // Letter11
+            // 
+            this.Letter11.AutoSize = true;
+            this.Letter11.BackColor = System.Drawing.Color.Transparent;
+            this.Letter11.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Letter11.Location = new System.Drawing.Point(750, 241);
+            this.Letter11.Name = "Letter11";
+            this.Letter11.Size = new System.Drawing.Size(40, 42);
+            this.Letter11.TabIndex = 23;
+            this.Letter11.Text = "L";
+            this.Letter11.Click += new System.EventHandler(this.Letter11_Click);
+            // 
+            // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1264, 985);
-            this.Controls.Add(LevelLabel);
-            this.Controls.Add(Skoda);
-            this.Controls.Add(Life);
-            this.Controls.Add(Points);
-            this.Controls.Add(Title);
-            this.Controls.Add(Word);
+            this.Controls.Add(this.Letter11);
+            this.Controls.Add(this.LevelLabel);
+            this.Controls.Add(this.Skoda);
+            this.Controls.Add(this.Life);
+            this.Controls.Add(this.Points);
+            this.Controls.Add(this.Title);
+            this.Controls.Add(this.Word);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(Letter2);
-            this.Controls.Add(Letter8);
-            this.Controls.Add(Letter4);
-            this.Controls.Add(Letter7);
-            this.Controls.Add(Letter3);
-            this.Controls.Add(Letter1);
-            this.Controls.Add(Letter6);
-            this.Controls.Add(Letter5);
-            this.Controls.Add(Letter9);
-            this.Controls.Add(Letter10);
-            this.Controls.Add(pictureBox5);
-            this.Controls.Add(pictureBox2);
-            this.Controls.Add(pictureBox3);
-            this.Name = "Form1";
+            this.Controls.Add(this.Letter2);
+            this.Controls.Add(this.Letter8);
+            this.Controls.Add(this.Letter4);
+            this.Controls.Add(this.Letter7);
+            this.Controls.Add(this.Letter3);
+            this.Controls.Add(this.Letter1);
+            this.Controls.Add(this.Letter6);
+            this.Controls.Add(this.Letter5);
+            this.Controls.Add(this.Letter9);
+            this.Controls.Add(this.Letter10);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox3);
+            this.Name = "Game";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -378,9 +386,7 @@ namespace Racewords
         private Letters LevelLabel;
         private Letters[] lettertab;
         private Movement[] linestab;
-
-
-
+        private Letters Letter11;
     }
 }
 
